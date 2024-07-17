@@ -1,6 +1,8 @@
 const buttons = document.querySelectorAll('.drum')
 function clickFunction(){
-    alert('i am clicked');
+    console.log(this.innerHTML);
+    const sound = new Audio("sounds/crash.mp3")
+    sound.play();
 }
 buttons.forEach((item) => {
     item.addEventListener('click', clickFunction);
