@@ -1,8 +1,41 @@
 const buttons = document.querySelectorAll('.drum')
 function clickFunction(){
+    const buttonInnerHTML = this.innerHTML;
+    switch (buttonInnerHTML) {
+        case "w":
+            const sound1 = new Audio("sounds/crash.mp3")
+            sound1.play();
+            break;
+        case "a":
+            const sound2 = new Audio("sounds/kick-bass.mp3")
+            sound2.play();
+            break;
+        case "s":
+            const sound3 = new Audio("sounds/snare.mp3")
+            sound3.play();
+            break;
+        case "d":
+            const sound4 = new Audio("sounds/tom-1.mp3")
+            sound4.play();
+            break;
+        case "j":
+            const sound5 = new Audio("sounds/tom-2.mp3")
+            sound5.play();
+            break;
+        case "k":
+            const sound6 = new Audio("sounds/tom-3.mp3")
+            sound6.play();
+            break;
+        case "l":
+            const sound7 = new Audio("sounds/tom-4.mp3")
+            sound7.play();
+            break;
+    
+        default:
+            break;
+    }
     console.log(this.innerHTML);
-    const sound = new Audio("sounds/crash.mp3")
-    sound.play();
+    
 }
 buttons.forEach((item) => {
     item.addEventListener('click', clickFunction);
@@ -23,3 +56,18 @@ function calc(n1, n2, operator) {
 
 console.log(calc(3, 4, add));
 console.log(calc(3, 4, mul));
+
+
+// creating objects using factory constructor functions
+function BellBoy(name, age, hasWorkPermit, languages) {
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
+}
+ 
+const bellBoy1 = new BellBoy("shane", 33, true, "english");
+const bellBoy2 = new BellBoy("rock", 32, false, "french");
+
+console.log(bellBoy1.age);
+console.log(bellBoy2.languages);
