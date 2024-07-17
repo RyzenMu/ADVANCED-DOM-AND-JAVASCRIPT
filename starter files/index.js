@@ -64,6 +64,9 @@ function BellBoy(name, age, hasWorkPermit, languages) {
     this.age = age;
     this.hasWorkPermit = hasWorkPermit;
     this.languages = languages;
+    this.move = () => {
+        console.log("I will move to other places");
+    }
 }
  
 const bellBoy1 = new BellBoy("shane", 33, true, "english");
@@ -71,3 +74,5 @@ const bellBoy2 = new BellBoy("rock", 32, false, "french");
 
 console.log(bellBoy1.age);
 console.log(bellBoy2.languages);
+bellBoy1.move();
+bellBoy2.move();
